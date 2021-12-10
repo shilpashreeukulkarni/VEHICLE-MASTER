@@ -1,0 +1,37 @@
+# Routes
+
+
+# An example controller showing a sample home page
+GET     /                              controllers.HomeController.index
+# An example controller showing how to use dependency injection
+GET     /count                         controllers.CountController.count
+# An example controller showing how to write asynchronous code
+GET     /message                       controllers.AsyncController.message
+
+GET     /about                          controllers.HomeController.about
+
+
+
+POST     /api/6.0/write/all_vehicles/details   controllers.VehicleController.createVehicle(request : Request)
+
+GET     /api/6.1/read/single_vehicle/details   controllers.VehicleController.fetchOneVehicle(vehicle_id :Int ?=0)
+
+GET     /api/6.2/read/all_vehicles/details   controllers.VehicleController.getAllVehicles()
+
+PUT     /api/6.3/update/vehicle/details				controllers.VehicleController.updateVehicle(request : Request)
+
+DELETE     /api/6.4/delete/vehicle/details			controllers.VehicleController.deleteVehicle(request : Request)
+
+DELETE     /api/6.5/delete/all_vehicle/details			controllers.VehicleController.deleteAllVehicles()
+
+
+
+
+
+
+
+
+
+
+# Map static resources from the /public folder to the /assets URL paths
+#GET     /assets/*file                   controllers.Assets.versioned(file)
